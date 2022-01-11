@@ -43,7 +43,6 @@ public class SymmetricCryptoDemo {
 					JFileChooser fileToEncrypt = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 
 					int encryptValue = fileToEncrypt.showOpenDialog(null);
-					// int returnValue = jfc.showSaveDialog(null);
 
 					if (encryptValue == JFileChooser.APPROVE_OPTION) {
 						File selectedFile = fileToEncrypt.getSelectedFile();
@@ -70,13 +69,11 @@ public class SymmetricCryptoDemo {
 					break;
 					
 				// Decrypt a specific file in the user's PC option
-					
 				case 3:
 					JFileChooser fileToDecrypt = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 
 					int decryptValue = fileToDecrypt.showOpenDialog(null);
-					// int returnValue = jfc.showSaveDialog(null);
-
+					
 					if (decryptValue == JFileChooser.APPROVE_OPTION) {
 						File selectedFile = fileToDecrypt.getSelectedFile();
 						System.out.println(selectedFile.getAbsolutePath());
