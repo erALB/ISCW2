@@ -6,7 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/user/Documents/GitHub/ISCW2/CryptoJavaExample/libs/commons-codec-1.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/user/Documents/GitHub/ISCW2/CryptoJavaExample/libs/jaxb-ri/mod/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="libs/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="libs/jaxb-ri/mod/jaxb-api.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
