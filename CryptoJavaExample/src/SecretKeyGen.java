@@ -7,6 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DataTypeConverter;
 
 public class SecretKeyGen {
 	private Cipher cipher;
@@ -59,6 +60,13 @@ public class SecretKeyGen {
 		} catch (Exception e) {
 			System.err.println("Writing key to disk failed: " + e.getMessage());
 		}
+		
+		System.out.print(
+	            "The Symmetric Key is :"
+	            + DatatypeConverter.printHexBinary(
+	                  keygen.getSecretKey().getEncoded()));
+		
+		
 
 	}
 }
