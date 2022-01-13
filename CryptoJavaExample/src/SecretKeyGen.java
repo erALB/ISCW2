@@ -7,7 +7,8 @@ import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DataTypeConverter;
+import javax.xml.bind.DatatypeConverter;
+
 
 public class SecretKeyGen {
 	private Cipher cipher;
@@ -40,6 +41,7 @@ public class SecretKeyGen {
 		}
 		return s.substring(0, length).getBytes("UTF-8");
 	}
+	
 
 	// Helper Function: write content to desired file path
 	private void writeToFile(String path, byte[] content) throws IOException {
@@ -53,14 +55,13 @@ public class SecretKeyGen {
 
 	// Tester application
 	public static void main(String[] args) {
-		SecretKeyGen keygen;
+		SecretKeyGen keygen = null;
 		try {
 			keygen = new SecretKeyGen("AES", 16, "MySecr3tPassw0rd1234");
 			keygen.writeToFile("keys/secret", keygen.getSecretKey().getEncoded());
 		} catch (Exception e) {
 			System.err.println("Writing key to disk failed: " + e.getMessage());
 		}
-		
 		System.out.print(
 	            "The Symmetric Key is :"
 	            + DatatypeConverter.printHexBinary(
