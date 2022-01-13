@@ -9,7 +9,6 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 
-
 public class SecretKeyGen {
 	private Cipher cipher;
 	private SecretKey secretKey;
