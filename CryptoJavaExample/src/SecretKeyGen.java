@@ -7,7 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DataTypeConverter;
+import javax.xml.bind.DatatypeConverter;
 
 public class SecretKeyGen {
 	private Cipher cipher;
@@ -53,7 +53,7 @@ public class SecretKeyGen {
 
 	// Tester application
 	public static void main(String[] args) {
-		SecretKeyGen keygen;
+		SecretKeyGen keygen = null;
 		try {
 			keygen = new SecretKeyGen("AES", 16, "MySecr3tPassw0rd1234");
 			keygen.writeToFile("keys/secret", keygen.getSecretKey().getEncoded());
