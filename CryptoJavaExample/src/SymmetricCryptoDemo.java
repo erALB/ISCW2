@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import javax.swing.filechooser.FileSystemView;
 
 public class SymmetricCryptoDemo {
@@ -13,6 +14,13 @@ public class SymmetricCryptoDemo {
 		// Get list of files in the directory
 		File dir = new File("files");
 		File[] filelist = dir.listFiles();
+		
+		// Using the UIManager class to improve the look & feel of the GUI
+		try {
+	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+	    } catch (Exception e) {
+	    	e.printStackTrace();     
+	    }
 
 		try {
 			// Instantiate the secret key generator
