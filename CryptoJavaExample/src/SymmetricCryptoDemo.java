@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.Arrays;
 
 import javax.swing.JFileChooser;
@@ -14,6 +16,11 @@ public class SymmetricCryptoDemo {
 		// Get list of files in the directory
 		File dir = new File("files");
 		File[] filelist = dir.listFiles();
+		
+		// Initialize BufferedReader and String variables for encryption/decryption output
+		BufferedReader br = null;
+		String line = "";
+		String fileText = "";
 		
 		// Using the UIManager class to improve the look & feel of the GUI
 		try {
@@ -72,8 +79,15 @@ public class SymmetricCryptoDemo {
 						} catch (Exception e) {
 							System.err.println("Couldn't encrypt " + selectedFile.getName() + ": " + e.getMessage());
 						}
+						// Get the contents of the selected file in text form
+						br = new BufferedReader(new FileReader(selectedFile));
+						while ((line = br.readLine()) != null) {
+							   fileText += "\n"+line;
+							 }
 					}
-					System.out.println("File encryption finished");
+					
+					System.out.println("File encryption finished. Result: "+fileText);
+					fileText = "";
 					break;
 					
 				// Decrypt a specific file in the user's PC option
@@ -89,8 +103,13 @@ public class SymmetricCryptoDemo {
 						} catch (Exception e) {
 							System.err.println("Couldn't decrypt " + selectedFile.getName() + ": " + e.getMessage());
 						}
+						br = new BufferedReader(new FileReader(selectedFile));
+						while ((line = br.readLine()) != null) {
+							   fileText += "\n"+line;
+							 }
 					}
-					System.out.println("File encryption finished");
+					System.out.println("File encryption finished. Result: "+fileText);
+					fileText = "";
 					break;
 
 				// Exit application

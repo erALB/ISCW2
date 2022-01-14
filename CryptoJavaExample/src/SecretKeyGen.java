@@ -62,7 +62,7 @@ public class SecretKeyGen {
 			System.err.println("Writing key to disk failed: " + e.getMessage());
 		}
 		System.out.print(
-	            "The Symmetric Key is :"
+	            "The Symmetric Key is: "
 	            + DatatypeConverter.printHexBinary(
 	                  keygen.getSecretKey().getEncoded()));
 		
