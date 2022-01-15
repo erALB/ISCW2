@@ -31,7 +31,7 @@ public class SymmetricCryptoDemo {
 
 		try {
 			// Instantiate the secret key generator
-			SecretKeyGen keygen = new SecretKeyGen("AES", 16, "MySecr3tPassw0rd");
+			SecretKeyGen keygen = new SecretKeyGen("AES", 16, "VerySecretiveKeyNoOneKnows");
 
 			// Show choice window for user
 			int choice = -2;

@@ -56,7 +56,7 @@ public class SecretKeyGen {
 	public static void main(String[] args) {
 		SecretKeyGen keygen = null;
 		try {
-			keygen = new SecretKeyGen("AES", 16, "MySecr3tPassw0rd1234");
+			keygen = new SecretKeyGen("AES", 16, "Very$ecretiveKeyN@OneKnow$");
 			keygen.writeToFile("keys/secret", keygen.getSecretKey().getEncoded());
 		} catch (Exception e) {
 			System.err.println("Writing key to disk failed: " + e.getMessage());
