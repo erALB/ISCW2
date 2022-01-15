@@ -6,5 +6,5 @@ Encrypt file, encrypts a file of your choice, no matter where the file is locate
 Decrypt file, decrypts a file of your choice.
 Exit allows you to exit the application.
 When the file SecretGenKey is ran, in the console you will be able to see the symmetric key used.
-IMPORTANT
+## IMPORTANT
 As far as we tested, this program works only in Eclipse IDE, when the encrypt all or decrypt all buttons are pressed, if running in Visual Studio Code, you will get an exception in the console Inccorect Algorithm Parameters: null.
